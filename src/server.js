@@ -1,8 +1,9 @@
 const express = require('express');
 import configViewEngine from './configs/viewEngine';
+require('dotenv').config()
 
 const app = express();
-const port  = 8080;
+const port  = process.env.PORT || 3000;
 
 configViewEngine(app);
 
