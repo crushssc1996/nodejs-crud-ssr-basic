@@ -1,8 +1,22 @@
+import connection from '../configs/connectDB';
+
 let getHomePage = (req, res) => {
-  // xu li logic, call qua services
-  // service call xuong db, lay data
-  // let data = yield dataService.getUserFromSubgroup();
-  res.render('index.ejs');
+  let data = [];
+  connection.query(
+    'SELECT * FROM `users`',
+    function(err, results, fields) {
+      console.log('>>> check mysql');
+      results.map(row => {
+        data.push({
+          id: row.id,
+          firstName: row.firstName,
+          lastName: row.lastName,
+          email: row.email,
+          address: row.address
+        })
+      })
+      res.render('index.ejs', {dataUser: data, test: 'abc'});
+    });
 }
 
 module.exports = {
