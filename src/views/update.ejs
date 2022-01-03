@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NodeJs Basic</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+  <div style="padding-left:16px">
+    <div class="create-user-container">
+      <div><b>Update User: </b></div>
+      <form action="/post-update-user" method="POST">
+        <div>
+          <input hidden type="text" name="id" value="<%= dataUser.id %>"/>
+        </div>
+        <div>
+          <label>First Name</label>
+          <input type="text" name="firstName" value="<%= dataUser.firstName %>"/>
+        </div>
+        <div>
+          <label>Last Name</label>
+          <input type="text" name="lastName" value="<%= dataUser.lastName %>"/>
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email" name="email" value="<%= dataUser.email %>"/>
+        </div>
+        <div>
+          <label>Address</label>
+          <input type="text" name="address" value="<%= dataUser.address %>"/>
+        </div>
+        <div>
+          <button type="submit" class="btn-submit">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
