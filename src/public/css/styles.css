@@ -44,3 +44,14 @@ body {
 .inline-c {
   display: inline-block;
 }
+
+.upload-section {
+  padding: 15px;
+}
+
+.upload-section label {
+  padding: 15px;
+}
+.upload-section .btn-submit {
+  padding: 15px;
+}
