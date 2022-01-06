@@ -23,7 +23,7 @@ body {
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: white;
 }
 
@@ -54,4 +54,9 @@ body {
 }
 .upload-section .btn-submit {
   padding: 15px;
+}
+.upload-title {
+  padding: 15px;
+  font-weight: 600;
+  text-align: center;
 }

@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NodeJs Basic</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
-<body>
-  <div>
-    <div class="topnav">
-      <a href="/">Home</a>
-      <a class="active" href="/upload-file">Upload</a>
-    </div>
-    <div class="upload-section">
-      <form method="POST" action="/upload-profile-pic" enctype="multipart/form-data">
-        <div class="upload-container">
-          <label>Avatar: </label>
-          <input type="file" name="profile_pic"/>
-        </div>
-        <div class="btn-submit">
-          <button type="submit">Upload</button>
-        </div>
-      </form>
-      <hr />
-      <form method="POST" action="/upload-multiple-images" enctype="multipart/form-data">
-        <div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NodeJs Basic</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <div>
+      <div class="topnav">
+        <a href="/">Home</a>
+        <a class="active" href="/upload-file">Upload</a>
+      </div>
+      <div class="upload-title">
+        Uploading image files with ExpressJs and Multer
+      </div>
+      <div class="upload-section">
+        <form
+          method="POST"
+          action="/upload-profile-pic"
+          enctype="multipart/form-data"
+        >
+          <div class="upload-container">
+            <label>Select a image: </label>
+            <input type="file" name="profile_pic" />
+          </div>
+          <div class="btn-submit">
+            <button type="submit">Upload</button>
+          </div>
+        </form>
+        <hr />
+        <form
+          method="POST"
+          action="/upload-multiple-images"
+          enctype="multipart/form-data"
+        >
+          <div>
             <label>Select multiple images:</label>
             <input type="file" name="multiple_images" multiple />
-        </div>
-        <div class="btn-submit">
-            <input type="submit" name="btn_upload_multiple_images" value="Upload" />
-        </div>
-      </form>
+          </div>
+          <div class="btn-submit">
+            <input
+              type="submit"
+              name="btn_upload_multiple_images"
+              value="Upload"
+            />
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
